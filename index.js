@@ -37,11 +37,12 @@ spdy
     },
     app
   )
-  .listen(8000, function (err) {
+  const port = process.env.PORT || 3000;
+  app.listen(8000, function (err) {
     if (err) {
       throw new Error(err);
     }
-    console.log("Listening on port https://localhost:8000");
+    console.log("Listening on port https://localhost:" +port);
   });
 
 
